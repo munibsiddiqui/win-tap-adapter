@@ -1,9 +1,6 @@
 trigger:
 - master
 
-variables:
-  PUBLIC_REPO_URL: 'git@github.com:ProtonVPN/win-tap-adapter.git'
-
 jobs:
 - job: BuildTAPAdapter
   pool:
