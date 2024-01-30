@@ -9,7 +9,7 @@ jobs:
   pool:
     vmImage: 'windows-latest'
   steps:
-  - checkout: git://github.com/OpenVPN/tap-windows6.git
+  - checkout: https://github.com/OpenVPN/tap-windows6.git
   - powershell: |
       (Get-Content version.m4) -replace "(\[PRODUCT_TAP_WIN_COMPONENT_ID]\, \[)([a-z0-9]+)(\])", 'tapprotonvpn' | Out-File version.m4 -Encoding "UTF8"
       (Get-Content version.m4) -replace "(\[PRODUCT_TAP_WIN_PROVIDER]\, \[)([a-zA-Z0-9- ]+)(\])", 'TAP-ProtonVPN Windows Provider V9' | Out-File version.m4 -Encoding "UTF8"
